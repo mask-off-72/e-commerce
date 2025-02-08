@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/068011937d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Website Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="">About</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="">Model</a></li>
+            </ul>
+            <div class="searchBar">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="header_top">
+        <header class="section__container header__container" id="home">
+            <div class="header__image">
+                <img src="./images/preview.jpeg" alt="header" />
+            </div>
+            <div class="header__content">
+                <div>
+                    <h1>Coaching Institute</h1>
+                    <p>
+                        Abinesh Potta
+                    </p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Course Section -->
+    <section class="women" id="courses">
+        <header class="head">
+            <h1>Our <span>Courses</span></h1>
+        </header>
+
+        <div class="shop">
+            <!-- Java Full Stack Development Course -->
+            <article class="card">
+                <img src="./images/download (1).jpg" alt="Java Full Stack Development Course">
+                <div class="cardText">
+                    <p>Java Full Stack Development</p>
+                    <h3>$10</h3>
+                    <div class="stars" aria-label="4-star rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="payButton">Checkout!</button>
+                </div>
+            </article>
+
+            <!-- AWS Course -->
+            <article class="card">
+                <img src="./images/download.png" alt="AWS Course">
+                <div class="cardText">
+                    <p>AWS</p>
+                    <h3>$10</h3>
+                    <div class="stars" aria-label="4-star rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="payButton">Checkout!</button>
+                </div>
+            </article>
+
+            <!-- Abinesh  -->
+            <article class="card">
+                <img src="./images/abinesh.jpeg" alt="AWS Course">
+                <div class="cardText">
+                    <p>Abinesh(call boy)</p>
+                    <h3>free</h3>
+                    <div class="stars" aria-label="4-star rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="payButton">Checkout!</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- Payment Popup -->
+    <div class="payment" id="paymentPopup" style="display: none;">
+        <h1 class="payTitle">Personal Information</h1>
+        
+        <label for="name">Name and Surname</label>
+        <input type="text" id="name" placeholder="Your Name" class="payInput" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+1 234 5678" class="payInput" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Street, City, Country" class="payInput" required>
+
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+            <img src="./images/visa.png" width="40" alt="Visa Card" class="cardIcon">
+            <img src="./images/master.png" width="40" alt="MasterCard" class="cardIcon">
+        </div>
+
+        <label for="cardNumber">Card Number</label>
+        <input type="password" id="cardNumber" class="payInput" placeholder="Card Number" required>
+
+        <div class="cardInfo">
+            <input type="text" placeholder="MM" class="payInput sm" required>
+            <input type="text" placeholder="YYYY" class="payInput sm" required>
+            <input type="text" placeholder="CVV" class="payInput sm" required>
+        </div>
+
+        <button class="closebutton">Pay Now</button>
+        <span class="close" id="closePopup" aria-label="Close Payment Popup">X</span>
+    </div>
+
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h2 class="fMenuTitle">About Us</h2>
+                <ul class="fList">
+                    <li class="fListItem"><a href="#">Company</a></li>
+                    <li class="fListItem"><a href="#">Contact</a></li>
+                    <li class="fListItem"><a href="#">Careers</a></li>
+                    <li class="fListItem"><a href="#">Affiliates</a></li>
+                    <li class="fListItem"><a href="#">Stores</a></li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h2 class="fMenuTitle">Useful Links</h2>
+                <ul class="fList">
+                    <li class="fListItem"><a href="#">Support</a></li>
+                    <li class="fListItem"><a href="#">Refund</a></li>
+                    <li class="fListItem"><a href="#">FAQ</a></li>
+                    <li class="fListItem"><a href="#">Feedback</a></li>
+                    <li class="fListItem"><a href="#">Stories</a></li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h2 class="fMenuTitle">Products</h2>
+                <ul class="fList">
+                    <li class="fListItem"><a href="#">Air Force</a></li>
+                    <li class="fListItem"><a href="#">Air Jordan</a></li>
+                    <li class="fListItem"><a href="#">Blazer</a></li>
+                    <li class="fListItem"><a href="#">Crater</a></li>
+                    <li class="fListItem"><a href="#">Hippie</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h2 class="fMenuTitle">Subscribe to our newsletter</h2>
+                <div class="fMail">
+                    <input type="email" placeholder="your@email.com" class="fInput" aria-label="Enter your email">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h2 class="fMenuTitle">Follow Us</h2>
+                <div class="fIcons">
+                    <a href="#"><img src="./img/facebook.png" alt="Facebook" class="fIcon"></a>
+                    <a href="#"><img src="./img/twitter.png" alt="Twitter" class="fIcon"></a>
+                    <a href="#"><img src="./img/instagram.png" alt="Instagram" class="fIcon"></a>
+                    <a href="#"><img src="./img/whatsapp.png" alt="WhatsApp" class="fIcon"></a>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">&copy; 2024 Lama Dev. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript -->
+    <script>
+        document.querySelectorAll(".payButton").forEach(button => {
+            button.addEventListener("click", () => {
+                document.getElementById("paymentPopup").style.display = "flex";
+            });
+        });
+
+        document.getElementById("closePopup").addEventListener("click", () => {
+            document.getElementById("paymentPopup").style.display = "none";
+        });
+    </script>
+</body>
+</html>
